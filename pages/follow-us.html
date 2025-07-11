@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Follow Us - The Quiet Space Library</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #f0f0f0, #dcdcdc);
+      padding-top: 50px;
+    }
+
+    .social-btn {
+      width: 220px;
+      margin: 10px;
+      font-size: 1.1rem;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    .section-box {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (loaded via script or static content) -->
+  <div id="header"></div>
+
+  <!-- Follow Us Section -->
+  <main>
+    <div class="container text-center">
+      <div class="section-box mx-auto mt-5" style="max-width: 600px;">
+        <h2 class="mb-4">Follow Us</h2>
+        <p class="mb-4">Stay connected with us on social media for the latest updates, events, and digital collections!</p>
+
+        <div class="d-flex flex-column align-items-center mt-4">
+          <button class="btn btn-primary social-btn" onclick="openSocial('facebook')">
+            <i class="bi bi-facebook icon"></i> Facebook
+          </button>
+          <button class="btn btn-danger social-btn" onclick="openSocial('youtube')">
+            <i class="bi bi-youtube icon"></i> YouTube
+          </button>
+          <button class="btn btn-dark social-btn" onclick="openSocial('x')">
+            <i class="bi bi-twitter-x icon"></i> X (Twitter)
+          </button>
+          <button class="btn btn-warning text-dark social-btn" onclick="openSocial('instagram')">
+            <i class="bi bi-instagram icon"></i> Instagram
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="../scripts/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function openSocial(platform) {
+      const urls = {
+        facebook: "https://www.facebook.com/yourlibrarypage",
+        youtube: "https://www.youtube.com/@yourlibrarychannel",
+        instagram: "https://www.instagram.com/yourlibraryhandle",
+        x: "https://twitter.com/yourlibraryhandle"
+      };
+      if (urls[platform]) {
+        window.open(urls[platform], '_blank');
+      } else {
+        alert("Platform not configured.");
+      }
+    }
+  </script>
+</body>
+</html>
